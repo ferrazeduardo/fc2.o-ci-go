@@ -3,6 +3,12 @@ on: [push]
 jobs:
   run-github-actions:
     runs-on: ubuntu-latest
+    steps: 
+      - name: simple javascript action
+        id: hello
+        uses: actions/hello-world-javascript-action@v1
+        with:
+          who-to-greet: devoshint 
   #   check-application:
   # #  runs-on: ubuntu-latest
   #   steps:
