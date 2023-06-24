@@ -6,9 +6,13 @@ jobs:
     steps: 
       - name: simple javascript action
         id: hello
-        uses: actions/hello-world-javascript-action@v1
+         - uses: actions/checkout@v3
+         - uses: actions/setup-go@v4
         with:
-          who-to-greet: devoshint 
+            go-version: '^1.13.1' 
+        - run: go test
+        - run: go run math.go
+
   #   check-application:
   # #  runs-on: ubuntu-latest
   #   steps:
