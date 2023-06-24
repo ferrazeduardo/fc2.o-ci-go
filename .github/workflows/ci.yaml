@@ -1,14 +1,16 @@
 name: ci-golang-workflow
 on: [push]
 jobs:
-    check-application:
-  #  runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout
-      - uses: actions/setup-go
-        with:
-          go-version: '^1.13.1' # The Go version to download (if necessary) and use.
-      - run: go version
+  run-github-actions:
+    runs-on: ubuntu-latest
+  #   check-application:
+  # #  runs-on: ubuntu-latest
+  #   steps:
+  #     - uses: actions/checkout
+  #     - uses: actions/setup-go
+  #       with:
+  #         go-version: '^1.13.1' # The Go version to download (if necessary) and use.
+  #     - run: go version
 
 
 
